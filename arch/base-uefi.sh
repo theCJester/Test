@@ -1,5 +1,6 @@
 #!/bin/bash
 
+reflector --latest 5 --sort rate --country Canada,US --age 12 --protocol https --save /etc/pacman.d/mirrorlist
 ln -sf /usr/share/zoneinfo/America/Edmonton /etc/localtime
 hwclock --systohc
 sed -i '177s/.//' /etc/locale.gen
